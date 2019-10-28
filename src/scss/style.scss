@@ -1,0 +1,337 @@
+@charset "utf-8";
+@import "base/**";
+@import "mixin/**";
+@import "module/**";
+
+// CSSを一つに纏める
+
+@import "page/**";
+
+$pink: #c88d95;
+$bg: #f4f4f4;
+$line: #8b8b8b;
+
+@mixin _font {
+  font-family: times, sans-serif;
+  font-weight: bold;
+}
+
+.reserv {
+  &-btn {
+    margin-left: auto;
+    a {
+      @include _flex(center);
+      align-items: center;
+      background: $pink;
+      color: #fff;
+      font-size: 2rem;
+      height: 60px;
+      width: 250px;
+      @include mq-max(w750) {
+        font-size: 4.27vw;
+        height: 16vw;
+        width: 41.9vw;
+      }
+    }
+  }
+}
+
+.top {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1280px;
+  width: 100%;
+  &-inner {
+    @include _inner;
+    @include _flex(between);
+    @include mq-max(w750) {
+      padding: 0;
+    }
+  }
+  &-nav {
+    background: $bg;
+    left: 0;
+    margin-top: 10px;
+    padding: 4.69% 2.66% 4.69% 5.47%;
+    position: absolute;
+    @include mq-max(w750) {
+      display: none;
+    }
+    a {
+      @include _font;
+      font-size: 1.56vw;
+    }
+  }
+  &-list {
+    li:not(:first-child) {
+      margin-top: 19.7%;
+    }
+  }
+  &-sns {
+    @include _flex;
+    margin-top: 39.4%;
+    @include mq-max(w750){
+      margin-top: 18%;
+    }
+    li:not(:first-child) {
+      margin-left: 19.8%;
+    }
+  }
+  &-img {
+    margin-left: 1.8%;
+    position: relative;
+    @include mq-max(w750) {
+      margin-left: 0;
+    }
+  }
+  &-logo {
+    @include mq-max(w750) {
+      display: none;
+    }
+  }
+  &-logo_sp {
+    display: none;
+    @include mq-max(w750) {
+      display: block;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 33.33vw;
+    }
+  }
+}
+
+.main {
+  margin-top: 130px;
+  @include mq-max(w750) {
+    margin-top: 21.4%;
+  }
+  &-content {
+    @include _flex(between);
+    flex-wrap: wrap;
+    &._even {
+      margin-top: 130px;
+      @include mq-max(w750) {
+        margin-top: 21.4%;
+      }
+    }
+  }
+  &-txt {
+    width: calc(52% - 10.17% / 2);
+    @include mq-max(w750) {
+      width: 100%;
+    }
+    &._even {
+      order: 2;
+      @include mq-max(w750) {
+        order: 1;
+      }
+    }
+    p {
+      font-size: 1.8rem;
+      line-height: 2.44;
+      margin-top: 35px;
+      @include mq-max(w750) {
+        font-size: 4.27vw;
+        margin-top: 7.25%;
+      }
+      &._odd {
+        text-align: right;
+        @media all and (max-width: 1028px) {
+          text-align: left;
+        }
+      }
+    }
+  }
+  &-img {
+    width: calc(48% - 10.17% / 2);
+    &._even {
+      order: 1;
+      @include mq-max(w750) {
+        order: 2;
+      }
+    }
+    @include mq-max(w750) {
+      margin-top: 11.6%;
+      width: 100%;
+    }
+  }
+}
+
+.ttl {
+  @include _flex;
+  align-items: center;
+  &-line {
+    background: $pink;
+    height: 3px;
+    max-width: 317px;
+    width: 24.8vw;
+    @include mq-max(w750) {
+      width: 41.33vw;
+    }
+    &._odd {
+      margin-right: 30px;
+      @include mq-max(w750) {
+        margin-right: 8vw;
+      }
+    }
+    &._even {
+      order: 2;
+      margin-left: 30px;
+      @include mq-max(w750) {
+        margin-left: 8vw;
+      }
+    }
+  }
+  h2 {
+    @include _font;
+  }
+}
+
+.course {
+  margin-top: 130px;
+  @include mq-max(w750) {
+    margin-top: 21.4%;
+  }
+  &-content-wrapper {
+    @include _flex(between);
+    flex-wrap: wrap;
+  }
+  &-content {
+    width: calc(52% - 10.17% / 2);
+    @include mq-max(w768) {
+      width: calc(52% - 5% / 2);
+    }
+    @include mq-max(w750) {
+      width: 100%;
+    }
+  }
+  .ttl-line {
+    order: 1;
+  }
+  h2 {
+    order: 2;
+    margin-left: 30px;
+    @include mq-max(w750) {
+      margin-left: 8vw;
+    }
+  }
+  &-dl {
+    margin-top: 50px;
+    @include mq-max(w750) {
+      margin-top: 14.5%;
+    }
+  }
+  &-list {
+    @include _flex(between);
+    border-bottom: 1px solid $line;
+    padding: 20px 25px 7px;
+  }
+  &-img-wrapper {
+    @include _flex;
+    align-items: flex-end;
+    width: calc(48% - 10.17% / 2);
+    @include mq-max(w768) {
+      width: calc(48% - 5% / 2);
+    }
+    @include mq-max(w750) {
+      margin-top: 24.6%;
+      width: 100%;
+    }
+  }
+  &-img {
+    &._cimg02 {
+      margin-left: 6.9%;
+      transform: translateY(-25px);
+    }
+  }
+  &-btn {
+    margin: 11.6% auto;
+    a {
+      @include _flex(center);
+      align-items: center;
+      background: $pink;
+      color: #fff;
+      @include mq-max(w750) {
+        font-size: 4.27vw;
+        height: 16vw;
+        width: 49.9vw;
+      }
+    }
+  }
+  &-btm {
+    @include _flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 38px;
+    width: 100%;
+    @include mq-max(w750) {
+      display: none;
+    }
+    a {
+      @include _flex(center);
+      align-items: center;
+      background: $pink;
+      color: #fff;
+      height: 50px;
+      width: 224px;
+    }
+  }
+  &-line {
+    background: $pink;
+    height: 3px;
+    width: 56.8vw;
+  }
+}
+
+.footer {
+  background: $bg;
+  margin-top: 100px;
+  padding: 50px 0;
+  &-inner {
+    margin: 0 auto;
+    max-width: calc(1180px + 200px);
+    padding: 0 100px;
+    width: 100%;
+    @include mq-max(w750) {
+      padding: 0 17.3%;
+    }
+  }
+  &-nav{
+    @include _flex(between);
+    @include mq-max(w750){
+      display: block;
+    }
+  }
+  &-list{
+    @include _flex(wrap);
+    @include mq-max(w750){
+      justify-content: space-between;
+      margin-top: 8vw;
+    }
+    li{
+      width: 50%;
+      @include mq-max(w750){
+        width: calc(50% - 12vw / 2);
+      }
+      &:nth-child(n+3){
+        margin-top: 25px;
+      }
+      &:nth-child(odd){
+      }
+      a{
+        @include mq-max(w750){
+          font-size: 3.73vw;
+        }
+      }
+    }
+  }
+  &-logo{
+    order: 2;
+    width: 150px;
+    @include mq-max(w750){
+      margin: 0 auto;
+      width: 32vw;
+    }
+  }
+}

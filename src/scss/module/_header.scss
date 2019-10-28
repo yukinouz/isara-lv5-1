@@ -1,0 +1,31 @@
+// Global Navi //
+header {
+  display: flex;
+  align-items: center; // IE対応要素の縦中央揃え
+  height: 60px;
+  @include mq-max(w750){
+    height: 16vw;
+  }
+  /* 固定ヘッダーの場合
+  position: fixed;
+  width: 100%;
+  z-index: 20; // ドロワーより下にする
+  */
+}
+ 
+header .flexbox {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* jQuery カレントページナビゲーションとの組み合わせ
+
+#gNav a.current{
+  text-decoration: underline;
+}
+
+*/
+
+// Global Navi //
+// ドロワーはdrawer.scss //

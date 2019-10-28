@@ -1,0 +1,19 @@
+@import "mixin/_responsive";
+
+$initType: "i01";
+@mixin _inner($type: $initType) {
+  margin: 0 auto;
+  max-width: calc(1180px + 100px);
+  padding: 0 50px;
+  width: 100%;
+  @include mq-max(w750){
+    padding: 0 4%;
+  }
+  @if ($type == "i01") {
+  } @else if($type == "i02") {
+}
+}
+
+.inner{
+  @include _inner;
+}
