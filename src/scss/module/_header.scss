@@ -3,6 +3,8 @@ header {
   display: flex;
   align-items: center; // IE対応要素の縦中央揃え
   height: 60px;
+  max-width: 1280px;
+  margin: 0 auto;
   @include mq-max(w750){
     height: 16vw;
   }

@@ -52,14 +52,21 @@ $line: #8b8b8b;
     background: $bg;
     left: 0;
     margin-top: 10px;
-    padding: 4.69% 2.66% 4.69% 5.47%;
+    padding: 60px 34px 60px 70px;
     position: absolute;
+    z-index: 2;
+    @include mq-max(w1280){
+      padding: 4.69% 2.66% 4.69% 5.47%;
+    }
     @include mq-max(w750) {
       display: none;
     }
     a {
       @include _font;
-      font-size: 1.56vw;
+      font-size: 2rem;
+      @include mq-max(w1280){
+        font-size: 1.56vw;
+      }
     }
   }
   &-list {
@@ -185,6 +192,10 @@ $line: #8b8b8b;
   }
   h2 {
     @include _font;
+    font-size: 4rem;
+    @include mq-max(w750){
+      font-size: 7.47vw;
+    }
   }
 }
 
@@ -243,6 +254,9 @@ $line: #8b8b8b;
     &._cimg02 {
       margin-left: 6.9%;
       transform: translateY(-25px);
+      @include mq-max(w750){
+        margin-left: 3.65%;
+      }
     }
   }
   &-btn {
@@ -280,58 +294,7 @@ $line: #8b8b8b;
   &-line {
     background: $pink;
     height: 3px;
+    max-width: 670px;
     width: 56.8vw;
-  }
-}
-
-.footer {
-  background: $bg;
-  margin-top: 100px;
-  padding: 50px 0;
-  &-inner {
-    margin: 0 auto;
-    max-width: calc(1180px + 200px);
-    padding: 0 100px;
-    width: 100%;
-    @include mq-max(w750) {
-      padding: 0 17.3%;
-    }
-  }
-  &-nav{
-    @include _flex(between);
-    @include mq-max(w750){
-      display: block;
-    }
-  }
-  &-list{
-    @include _flex(wrap);
-    @include mq-max(w750){
-      justify-content: space-between;
-      margin-top: 8vw;
-    }
-    li{
-      width: 50%;
-      @include mq-max(w750){
-        width: calc(50% - 12vw / 2);
-      }
-      &:nth-child(n+3){
-        margin-top: 25px;
-      }
-      &:nth-child(odd){
-      }
-      a{
-        @include mq-max(w750){
-          font-size: 3.73vw;
-        }
-      }
-    }
-  }
-  &-logo{
-    order: 2;
-    width: 150px;
-    @include mq-max(w750){
-      margin: 0 auto;
-      width: 32vw;
-    }
   }
 }
