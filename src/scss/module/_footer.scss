@@ -7,8 +7,8 @@
     padding: 6.67% 0 4%;
   }
   &-inner {
-    margin: 0 au0to;
-    max-width: calc(1180px + 200px);
+    margin: 0 auto;
+    max-width: calc(980px + 200px);
     padding: 0 100px;
     width: 100%;
     @include mq-max(w750) {

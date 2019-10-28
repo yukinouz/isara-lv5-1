@@ -707,8 +707,8 @@ button {
 }
 
 .footer-inner {
-  margin: 0 au0to;
-  max-width: calc(1180px + 200px);
+  margin: 0 auto;
+  max-width: calc(980px + 200px);
   padding: 0 100px;
   width: 100%;
 }
