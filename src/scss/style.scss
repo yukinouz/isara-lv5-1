@@ -251,6 +251,11 @@ $line: #8b8b8b;
     }
   }
   &-img {
+    max-width: 250px;
+    width: 100%;
+    @include mq-max(w750){
+      max-width: 332.41px;
+    }
     &._cimg02 {
       margin-left: 6.9%;
       transform: translateY(-25px);

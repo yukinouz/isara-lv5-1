@@ -1247,6 +1247,17 @@ header .flexbox {
   }
 }
 
+.course-img {
+  max-width: 250px;
+  width: 100%;
+}
+
+@media screen and (max-width: 750px) {
+  .course-img {
+    max-width: 332.41px;
+  }
+}
+
 .course-img._cimg02 {
   -webkit-transform: translateY(-25px);
   margin-left: 6.9%;
